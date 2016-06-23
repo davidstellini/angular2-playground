@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { TodoComponent } from './todo/todo.component';
+import {TodoService} from './todo/todo.service';
 import {provideRouter, RouterConfig, ROUTER_DIRECTIVES } from '@angular/router';
-import {BadIdeasComponent} from './badIdeasComponent/badIdeas.component';
+import { badIdeasRoutes } from './badIdeasComponent/badIdeas.routes';
+import { todoRoutes } from './todo/todo.routes';
 
 @Component({
   selector: 'my-app',
@@ -15,6 +16,9 @@ import {BadIdeasComponent} from './badIdeasComponent/badIdeas.component';
   `,
   directives: [
     ROUTER_DIRECTIVES
+  ],
+  providers : [
+    TodoService
   ]
 })
 export class AppComponent {
@@ -28,9 +32,8 @@ export class AppComponent {
 }
 
 export const routes: RouterConfig = [
-  { path: 'todoList', component: TodoComponent },
-  // { path: 'todo/:id', component: TodoComponent/*View*/ },
-  { path: 'badIdeas', component: BadIdeasComponent },
+  ...badIdeasRoutes,
+  ...todoRoutes
 ];
 
 export const APP_ROUTER_PROVIDERS = [

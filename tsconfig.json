@@ -29,8 +29,10 @@
     "src/app/app.component.ts",
     "src/app/app.ts",
     "src/app/badIdeasComponent/badIdeas.component.ts",
+    "src/app/badIdeasComponent/badIdeas.routes.ts",
     "src/app/todo/todo.component.ts",
     "src/app/todo/todo.model.ts",
+    "src/app/todo/todo.routes.ts",
     "src/app/todo/todo.service.ts",
     "typings/index.d.ts"
   ]
